@@ -1,0 +1,17 @@
+﻿input {
+tcp {
+    host => "10.32.12.52"
+    port => 1233
+}
+}
+filter {
+  mutate { gsub => ["message", "@($NL$)@", "\r\n"] 
+          
+  }
+  json { source => message }
+}
+output {
+  elasticsearch {
+
+  }
+}

@@ -45,15 +45,9 @@ namespace NetStashStandard
             foreach (PropertyInfo p in properties)
             {
                 object o = GetType().GetProperty(p.Name).GetValue(this);
-                //jsonFields.Add(StringFormat(p.Name) + ':' + StringFormat(o == null ? "" : o.ToString()));
                 jsonFields.Add(string.Format("\"{0}\":\"{1}\" ", p.Name, o == null ? "" : o.ToString()));
             }
             return "{" + String.Join(",", jsonFields) + "}";
         }
-
-        //private string StringFormat(string s)
-        //{
-        //    return '"' + s + '"';
-        //}
     }
 }

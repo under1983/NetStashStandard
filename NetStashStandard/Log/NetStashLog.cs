@@ -9,27 +9,29 @@ namespace NetStashStandard.Log
 {
     public class NetStashLog
     {
-        public static bool Core;
+        public static TypeNet TypeNet;
         
         private string logstashIp = string.Empty;
         private int logstashPort = -1;
         private string system = string.Empty;
+        private string currentApp = string.Empty;
         private string currentAppVersion = string.Empty;
         private string user = string.Empty;
 
 
-        public NetStashLog(string logstashIp, int logstashPort, string currentAppVersion, string User , bool core)
+        public NetStashLog(string logstashIp, int logstashPort, string currentApp, string currentAppVersion, string User , TypeNet typeNet)
         {
             if (string.IsNullOrWhiteSpace(logstashIp))
                 throw new ArgumentNullException("logstashIp");
 
-            if (string.IsNullOrWhiteSpace(currentAppVersion))
+            if (string.IsNullOrWhiteSpace(currentApp))
                 throw new ArgumentNullException("system");
-            Core = core;
-            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentAppVersion, User);
+            TypeNet = typeNet;
+            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentApp, currentAppVersion, User);
 
             this.logstashIp = logstashIp;
             this.logstashPort = logstashPort;
+            this.currentApp = currentApp;
             this.currentAppVersion = currentAppVersion;
             this.user = User;
         }

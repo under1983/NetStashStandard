@@ -224,8 +224,6 @@ C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestNet461\obj\Deb
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestNet461\obj\Debug\TestNet461.csproj.CopyComplete
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestNet461\obj\Debug\TestNet461.exe
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestNet461\obj\Debug\TestNet461.pdb
-C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\x64\SQLite.Interop.dll
-C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\x86\SQLite.Interop.dll
 C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\TestNet461.exe.config
 C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\TestNet461.exe
 C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\TestNet461.pdb
@@ -337,3 +335,10 @@ C:\Desarrollo\NetStashStandard\TestNet461\obj\Debug\TestNet461.csproj.CoreCompil
 C:\Desarrollo\NetStashStandard\TestNet461\obj\Debug\TestNet461.csproj.CopyComplete
 C:\Desarrollo\NetStashStandard\TestNet461\obj\Debug\TestNet461.exe
 C:\Desarrollo\NetStashStandard\TestNet461\obj\Debug\TestNet461.pdb
+C:\Users\Usuario\Documents\NetStashStandard\TestNet461\obj\Debug\TestNet461.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\NetStashStandard\TestNet461\obj\Debug\TestNet461.exe.config
+C:\Users\Usuario\Documents\NetStashStandard\TestNet461\obj\Debug\TestNet461.Properties.Resources.resources
+C:\Users\Usuario\Documents\NetStashStandard\TestNet461\obj\Debug\TestNet461.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\NetStashStandard\TestNet461\obj\Debug\TestNet461.csproj.CoreCompileInputs.cache
+C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\x64\SQLite.Interop.dll
+C:\Desarrollo\NetStashStandard\TestNet461\bin\Debug\x86\SQLite.Interop.dll

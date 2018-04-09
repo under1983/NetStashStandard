@@ -9,14 +9,10 @@ namespace NetStashStandard.Storage.Proxy
 {
     public class LogProxy //: BaseProxy
     {
-       
-        public static bool Core { get; set; }
         private BaseProxy baseProxy = new BaseProxy();
         public LogProxy() //: base(Core)
         {
-            
-            Core = NetStashStandard.Log.NetStashLog.Core;
-            if (Core)
+            if (NetStashStandard.Log.NetStashLog.TypeNet == Log.TypeNet.NetCore)
                 baseProxy.BaseProxyCore();
             else
                 baseProxy.BaseProxyNet();
@@ -31,7 +27,7 @@ namespace NetStashStandard.Storage.Proxy
             string JsonString = log.GetJson();
             addLog.Message = JsonString;
 
-            using (IDbConnection db = Core ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
+            using (IDbConnection db = NetStashStandard.Log.NetStashLog.TypeNet == Log.TypeNet.NetCore ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
 
             using (IDbCommand cmd = db.CreateCommand())
             {
@@ -95,7 +91,7 @@ namespace NetStashStandard.Storage.Proxy
             //#else
             //           using (IDbConnection db = base.GetConnection())
             //#endif
-            using (IDbConnection db = Core ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
+            using (IDbConnection db = NetStashStandard.Log.NetStashLog.TypeNet == Log.TypeNet.NetCore ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
             using (IDbCommand cmd = db.CreateCommand())
             {
                 cmd.CommandText = "SELECT IdLog, Message from Log order by IdLog asc LIMIT " + count;
@@ -130,7 +126,7 @@ namespace NetStashStandard.Storage.Proxy
             //#else
             //           using (IDbConnection db = base.GetConnection())
             //#endif
-            using (IDbConnection db = Core ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
+            using (IDbConnection db = NetStashStandard.Log.NetStashLog.TypeNet == Log.TypeNet.NetCore ? baseProxy.GetConnectionSqlite() : baseProxy.GetConnection())
             using (IDbCommand cmd = db.CreateCommand())
             {
                 cmd.CommandText = "DELETE FROM Log WHERE IdLog = @IdLog";

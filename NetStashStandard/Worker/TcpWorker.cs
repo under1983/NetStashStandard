@@ -11,6 +11,8 @@ namespace NetStashStandard.Worker
 {
     public static class TcpWorker
     {
+        
+        static string currentapp = string.Empty;
         static string currentappversion = string.Empty;
         static string user = string.Empty;
         static string logstashIp = string.Empty;
@@ -23,7 +25,7 @@ namespace NetStashStandard.Worker
         static bool stopCalled = false;
 
 
-        public static void Initialize(string logstashAddressIp, int logstashAddressPort, string currentAppVersion, string User)
+        public static void Initialize(string logstashAddressIp, int logstashAddressPort, string currentApp, string currentAppVersion, string User)
         {
             if (string.IsNullOrWhiteSpace(logstashAddressIp))
                 throw new ArgumentNullException("logstashAddressIp");
@@ -31,6 +33,7 @@ namespace NetStashStandard.Worker
             logstashIp = logstashAddressIp;
             logstashPort = logstashAddressPort;
             user = User;
+            currentapp = currentApp;
             currentappversion = currentAppVersion;
             Run();
         }
@@ -54,7 +57,7 @@ namespace NetStashStandard.Worker
                         }
                         catch (Exception ex)
                         {
-                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, currentappversion, user, Log.NetStashLog.Core);
+                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, user, currentapp, currentappversion, Log.NetStashLog.TypeNet);
                             log.InternalError("Logstash communication error: " + ex.Message, System.Reflection.MethodBase.GetCurrentMethod());
                         }
                     }

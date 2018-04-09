@@ -2677,7 +2677,6 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\Documents\\sgi-planning\\NuGet.Config",
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
@@ -2687,7 +2686,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://sgi.metbus.cl/SGINuget/nuget/": {},
+        "http://sgi.metbus.cl/SGINuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

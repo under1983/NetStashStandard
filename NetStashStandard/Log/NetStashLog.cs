@@ -14,24 +14,22 @@ namespace NetStashStandard.Log
         private string logstashIp = string.Empty;
         private int logstashPort = -1;
         private string system = string.Empty;
-        private string currentApp = string.Empty;
         private string currentAppVersion = string.Empty;
         private string user = string.Empty;
 
 
-        public NetStashLog(string logstashIp, int logstashPort, string currentApp, string currentAppVersion, string User , TypeNet typeNet)
+        public NetStashLog(string logstashIp, int logstashPort, string currentAppVersion, string User , TypeNet typeNet)
         {
             if (string.IsNullOrWhiteSpace(logstashIp))
                 throw new ArgumentNullException("logstashIp");
 
-            if (string.IsNullOrWhiteSpace(currentApp))
+            if (string.IsNullOrWhiteSpace(currentAppVersion))
                 throw new ArgumentNullException("system");
             TypeNet = typeNet;
-            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentApp, currentAppVersion, User);
+            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentAppVersion, User);
 
             this.logstashIp = logstashIp;
             this.logstashPort = logstashPort;
-            this.currentApp = currentApp;
             this.currentAppVersion = currentAppVersion;
             this.user = User;
         }

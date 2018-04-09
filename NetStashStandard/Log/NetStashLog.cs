@@ -9,7 +9,7 @@ namespace NetStashStandard.Log
 {
     public class NetStashLog
     {
-        public static bool Core;
+        public static TypeNet TypeNet;
         
         private string logstashIp = string.Empty;
         private int logstashPort = -1;
@@ -19,14 +19,14 @@ namespace NetStashStandard.Log
         private string user = string.Empty;
 
 
-        public NetStashLog(string logstashIp, int logstashPort, string currentApp, string currentAppVersion, string User , bool core)
+        public NetStashLog(string logstashIp, int logstashPort, string currentApp, string currentAppVersion, string User , TypeNet typeNet)
         {
             if (string.IsNullOrWhiteSpace(logstashIp))
                 throw new ArgumentNullException("logstashIp");
 
             if (string.IsNullOrWhiteSpace(currentApp))
                 throw new ArgumentNullException("system");
-            Core = core;
+            TypeNet = typeNet;
             Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentApp, currentAppVersion, User);
 
             this.logstashIp = logstashIp;

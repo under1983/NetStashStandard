@@ -27,8 +27,6 @@ C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\NetStashStandard\o
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csproj.CopyComplete
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.dll
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.pdb
-C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\x64\SQLite.Interop.dll
-C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\x86\SQLite.Interop.dll
 C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.deps.json
 C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.dll
 C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.pdb
@@ -53,3 +51,5 @@ C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstanda
 C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csproj.CopyComplete
 C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.dll
 C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.pdb
+C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\x64\SQLite.Interop.dll
+C:\Desarrollo\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\x86\SQLite.Interop.dll

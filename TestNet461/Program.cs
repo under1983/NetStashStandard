@@ -16,9 +16,9 @@ namespace TestNet461
         [STAThread]
         static void Main()
         {
-            NetStashLog log = new NetStashLog("172.168.2.850", 5355, "Testing Net Core with DLL Net Standard", System.Diagnostics.Process.GetCurrentProcess().ProcessName, System.Diagnostics.Process.GetCurrentProcess().MainModule.FileVersionInfo.FileVersion,false);
+            NetStashLog log = new NetStashLog("172.168.2.850", 5355, "Testing Net Core with DLL Net Standard", System.Diagnostics.Process.GetCurrentProcess().ProcessName, System.Diagnostics.Process.GetCurrentProcess().MainModule.FileVersionInfo.FileVersion,TypeNet.Net461);
 
-            log.Error("Testing", System.Reflection.MethodBase.GetCurrentMethod().Name);
+            log.Error("Testing", System.Reflection.MethodBase.GetCurrentMethod());
 
             Thread.Sleep(500);
 

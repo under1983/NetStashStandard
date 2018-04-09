@@ -57,7 +57,7 @@ namespace NetStashStandard.Worker
                         }
                         catch (Exception ex)
                         {
-                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, user, currentapp, currentappversion, Log.NetStashLog.Core);
+                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, user, currentapp, currentappversion, Log.NetStashLog.TypeNet);
                             log.InternalError("Logstash communication error: " + ex.Message, System.Reflection.MethodBase.GetCurrentMethod());
                         }
                     }

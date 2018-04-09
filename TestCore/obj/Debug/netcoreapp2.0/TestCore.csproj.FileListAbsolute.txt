@@ -34,10 +34,6 @@ C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestCore\obj\Debug
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csproj.CopyComplete
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.dll
 C:\Users\Manuel\Documents\Visual Studio 2017\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.pdb
-C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfoInputs.cache
-C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfo.cs
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\TestCore.deps.json
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\TestCore.runtimeconfig.json
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\TestCore.runtimeconfig.dev.json
@@ -46,7 +42,10 @@ C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\Tes
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\NetStashStandard.dll
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\System.Data.SQLite.dll
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\NetStashStandard.pdb
-C:\Users\Usuario\Documents\NetStashStandard\TestCore\bin\Debug\netcoreapp2.0\System.Data.SQLite.xml
+C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.AssemblyInfo.cs
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.csproj.CopyComplete
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.dll
 C:\Users\Usuario\Documents\NetStashStandard\TestCore\obj\Debug\netcoreapp2.0\TestCore.pdb

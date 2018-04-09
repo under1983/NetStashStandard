@@ -8,7 +8,7 @@ namespace TestCore
     {
         static void Main(string[] args)
         {
-            NetStashLog log = new NetStashLog("172.168.2.102", 5356, System.Diagnostics.Process.GetCurrentProcess().MainModule.FileVersionInfo.FileVersion, "hola", true);
+            NetStashLog log = new NetStashLog("172.168.2.56", 5356, System.Diagnostics.Process.GetCurrentProcess().MainModule.FileVersionInfo.FileVersion, "hola", true);
 
             log.Error("Testing", System.Reflection.MethodBase.GetCurrentMethod());
 

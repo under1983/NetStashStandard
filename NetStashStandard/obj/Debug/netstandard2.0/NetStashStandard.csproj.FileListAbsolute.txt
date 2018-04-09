@@ -41,3 +41,15 @@ C:\Desarrollo\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStas
 C:\Desarrollo\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csproj.CopyComplete
 C:\Desarrollo\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.dll
 C:\Desarrollo\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.pdb
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.AssemblyInfo.cs
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.deps.json
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.dll
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\NetStashStandard.pdb
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\System.Data.SQLite.dll
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\bin\Debug\netstandard2.0\System.Data.SQLite.xml
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.csproj.CopyComplete
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.dll
+C:\Users\Usuario\Documents\NetStashStandard\NetStashStandard\obj\Debug\netstandard2.0\NetStashStandard.pdb

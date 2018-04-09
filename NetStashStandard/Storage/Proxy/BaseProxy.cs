@@ -30,7 +30,7 @@ namespace NetStashStandard.Storage.Proxy
                 if (!File.Exists(dbFilePath))
                 {
                     System.Data.SQLite.SQLiteConnection.CreateFile(dbFilePath);
-
+              
                     CheckedDirectory();
 
                     CreateTable(GetConnection());

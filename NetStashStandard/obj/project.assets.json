@@ -2659,25 +2659,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Manuel\\.nuget\\packages\\": {},
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
       "projectName": "NetStashStandard",
-      "projectPath": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
-      "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
-      "outputPath": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\NetStashStandard\\NetStashStandard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Manuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -2686,6 +2686,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://sgi.metbus.cl/SGINuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

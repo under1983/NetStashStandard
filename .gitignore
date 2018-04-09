@@ -4,3 +4,10 @@ Debug/*
 
 obj/*
 .vs/*
+
+NetStashStandard/obj/*
+NetStashStandard/Debug/*
+TestCore/obj/*
+TestCore/Debug/*
+TestNet461/obj/*
+TestNet461/Debug/*

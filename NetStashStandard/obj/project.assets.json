@@ -2666,11 +2666,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manuel\\Documents\\Visual Studio 2017\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
+      "projectUniqueName": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
       "projectName": "NetStashStandard",
-      "projectPath": "C:\\Users\\Manuel\\Documents\\Visual Studio 2017\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
+      "projectPath": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\NetStashStandard.csproj",
       "packagesPath": "C:\\Users\\Manuel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manuel\\Documents\\Visual Studio 2017\\NetStashStandard\\NetStashStandard\\obj\\",
+      "outputPath": "C:\\Desarrollo\\NetStashStandard\\NetStashStandard\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

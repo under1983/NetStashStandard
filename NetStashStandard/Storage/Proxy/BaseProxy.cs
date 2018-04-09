@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 //using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -16,12 +17,8 @@ namespace NetStashStandard.Storage.Proxy
         static string dbFilePath = "./NetStash.db";
         static bool initialized = false;
         static object _lock = new object();
-        
 
-        internal static bool IsRunningOnMono()
-        {
-            return false;//Type.GetType("Mono.Runtime") != null;
-        }
+
 
         public void BaseProxyNet()
         {
@@ -32,49 +29,11 @@ namespace NetStashStandard.Storage.Proxy
 
                 if (!File.Exists(dbFilePath))
                 {
-                    if (!IsRunningOnMono())
-                    {
-                        //if (Core)
-                        //    new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
-                        //else
-                            System.Data.SQLite.SQLiteConnection.CreateFile(dbFilePath);
+                    System.Data.SQLite.SQLiteConnection.CreateFile(dbFilePath);
 
-                        if (!Directory.Exists("x86"))
-                        {
-                            Directory.CreateDirectory("x86");
-                            SaveToDisk("NetStash.x86.SQLite.Interop.dll", "x86\\SQLite.Interop.dll");
-                        }
+                    CheckedDirectory();
 
-                        if (!Directory.Exists("x64"))
-                        {
-                            Directory.CreateDirectory("x64");
-                            SaveToDisk("NetStash.x64.SQLite.Interop.dll", "x64\\SQLite.Interop.dll");
-                        }
-
-                        //if (Core)
-                        //{
-                        //    using (Microsoft.Data.Sqlite.SqliteConnection cnn = (Microsoft.Data.Sqlite.SqliteConnection)GetConnectionSqlite())
-                        //    {
-                        //        var command = cnn.CreateCommand();
-                        //        command.CommandText = "CREATE TABLE \"Log\" ([IdLog] integer, [Message] nvarchar, PRIMARY KEY(IdLog));";
-                        //        cnn.Open();
-                        //        command.ExecuteNonQuery();
-
-                        //    }
-                        //}
-                        //else
-                        //{
-                            using (System.Data.SQLite.SQLiteConnection cnn = (System.Data.SQLite.SQLiteConnection)GetConnection())
-                            {
-                                cnn.Open();
-                                System.Data.SQLite.SQLiteCommand cmd = new System.Data.SQLite.SQLiteCommand("CREATE TABLE \"Log\" ([IdLog] integer, [Message] nvarchar, PRIMARY KEY(IdLog));", cnn);
-                                cmd.ExecuteNonQuery();
-                            }
-                        //}
-
-
-                    }
-                    
+                    CreateTable(GetConnection());
                 }
 
                 initialized = true;
@@ -89,70 +48,53 @@ namespace NetStashStandard.Storage.Proxy
 
                 if (!File.Exists(dbFilePath))
                 {
-                    if (!IsRunningOnMono())
-                    {
-                        //if (Core)
-                            new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
-                        //else
-                        //    System.Data.SQLite.SQLiteConnection.CreateFile(dbFilePath);
+                    new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
 
-                        if (!Directory.Exists("x86"))
-                        {
-                            Directory.CreateDirectory("x86");
-                            SaveToDisk("NetStash.x86.SQLite.Interop.dll", "x86\\SQLite.Interop.dll");
-                        }
+                    CheckedDirectory();
 
-                        if (!Directory.Exists("x64"))
-                        {
-                            Directory.CreateDirectory("x64");
-                            SaveToDisk("NetStash.x64.SQLite.Interop.dll", "x64\\SQLite.Interop.dll");
-                        }
+                    CreateTable(GetConnectionSqlite());
 
-                        //if (Core)
-                        //{
-                            using (Microsoft.Data.Sqlite.SqliteConnection cnn = (Microsoft.Data.Sqlite.SqliteConnection)GetConnectionSqlite())
-                            {
-                                var command = cnn.CreateCommand();
-                                command.CommandText = "CREATE TABLE \"Log\" ([IdLog] integer, [Message] nvarchar, PRIMARY KEY(IdLog));";
-                                cnn.Open();
-                                command.ExecuteNonQuery();
-
-                            }
-                        //}
-                        //else
-                        //{
-                        //    using (System.Data.SQLite.SQLiteConnection cnn = (System.Data.SQLite.SQLiteConnection)GetConnection())
-                        //    {
-                        //        cnn.Open();
-                        //        System.Data.SQLite.SQLiteCommand cmd = new System.Data.SQLite.SQLiteCommand("CREATE TABLE \"Log\" ([IdLog] integer, [Message] nvarchar, PRIMARY KEY(IdLog));", cnn);
-                        //        cmd.ExecuteNonQuery();
-                        //    }
-                        //}
-
-
-                    }
-                    
                 }
 
                 initialized = true;
             }
         }
 
+        internal void CreateTable(IDbConnection Connection)
+        {
+            using (IDbConnection cnn = Connection)
+            {
+                cnn.Open();
+                IDbCommand cmd = cnn.CreateCommand();
+                cmd.CommandText = "CREATE TABLE \"Log\" ([IdLog] integer, [Message] nvarchar, PRIMARY KEY(IdLog));";
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         internal IDbConnection GetConnectionSqlite()
         {
-            if (!IsRunningOnMono())
-                return new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
-            else
-                return new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
+            return new Microsoft.Data.Sqlite.SqliteConnection(string.Format("Data Source={0}", dbFilePath));
         }
 
 
         internal IDbConnection GetConnection()
         {
-            if (!IsRunningOnMono())
-                return new System.Data.SQLite.SQLiteConnection(string.Format("Data Source={0}", dbFilePath));
-            else
-                return new System.Data.SQLite.SQLiteConnection(string.Format("Data Source={0}", dbFilePath));
+            return new System.Data.SQLite.SQLiteConnection(string.Format("Data Source={0}", dbFilePath));
+        }
+
+        internal void CheckedDirectory()
+        {
+            if (!Directory.Exists("x86"))
+            {
+                Directory.CreateDirectory("x86");
+                SaveToDisk("NetStash.x86.SQLite.Interop.dll", "x86\\SQLite.Interop.dll");
+            }
+
+            if (!Directory.Exists("x64"))
+            {
+                Directory.CreateDirectory("x64");
+                SaveToDisk("NetStash.x64.SQLite.Interop.dll", "x64\\SQLite.Interop.dll");
+            }
         }
 
         private void SaveToDisk(string file, string name)

@@ -11,7 +11,7 @@ namespace NetStashStandard.Worker
 {
     public static class TcpWorker
     {
-        static bool Core;
+        
         static string currentapp = string.Empty;
         static string currentappversion = string.Empty;
         static string user = string.Empty;
@@ -25,7 +25,7 @@ namespace NetStashStandard.Worker
         static bool stopCalled = false;
 
 
-        public static void Initialize(string logstashAddressIp, int logstashAddressPort, string currentApp, string currentAppVersion, string User,bool core)
+        public static void Initialize(string logstashAddressIp, int logstashAddressPort, string currentApp, string currentAppVersion, string User)
         {
             if (string.IsNullOrWhiteSpace(logstashAddressIp))
                 throw new ArgumentNullException("logstashAddressIp");
@@ -35,7 +35,6 @@ namespace NetStashStandard.Worker
             user = User;
             currentapp = currentApp;
             currentappversion = currentAppVersion;
-            Core = core;
             Run();
         }
 
@@ -58,7 +57,7 @@ namespace NetStashStandard.Worker
                         }
                         catch (Exception ex)
                         {
-                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, user, currentapp, currentappversion,Core);
+                            NetStashLog log = new NetStashLog(logstashIp, logstashPort, user, currentapp, currentappversion, Log.NetStashLog.Core);
                             log.InternalError("Logstash communication error: " + ex.Message, System.Reflection.MethodBase.GetCurrentMethod().Name);
                         }
                     }
@@ -88,7 +87,7 @@ namespace NetStashStandard.Worker
 
         private static void Runner()
         {
-            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy(Core);
+            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy();
             Dictionary<long, string> evs;
 
             lock (_lock)
@@ -106,7 +105,7 @@ namespace NetStashStandard.Worker
 
         private static void UpdateEntry(long id)
         {
-            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy(Core);
+            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy();
             proxy.Delete(id);
         }
 

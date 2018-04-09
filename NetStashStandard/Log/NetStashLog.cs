@@ -9,7 +9,7 @@ namespace NetStashStandard.Log
 {
     public class NetStashLog
     {
-        static bool Core;
+        public static bool Core;
         
         private string logstashIp = string.Empty;
         private int logstashPort = -1;
@@ -27,7 +27,7 @@ namespace NetStashStandard.Log
             if (string.IsNullOrWhiteSpace(currentApp))
                 throw new ArgumentNullException("system");
             Core = core;
-            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentApp, currentAppVersion, User,core);
+            Worker.TcpWorker.Initialize(logstashIp, logstashPort, currentApp, currentAppVersion, User);
 
             this.logstashIp = logstashIp;
             this.logstashPort = logstashPort;
@@ -152,7 +152,7 @@ namespace NetStashStandard.Log
             e.AppVersion = currentAppVersion;
             e.Username = user;
 
-            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy(Core);
+            Storage.Proxy.LogProxy proxy = new Storage.Proxy.LogProxy();
             proxy.Add(e);
 
             if (run)

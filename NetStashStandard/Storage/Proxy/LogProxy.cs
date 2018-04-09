@@ -12,10 +12,11 @@ namespace NetStashStandard.Storage.Proxy
        
         public static bool Core { get; set; }
         private BaseProxy baseProxy = new BaseProxy();
-        public LogProxy(bool core) //: base(Core)
+        public LogProxy() //: base(Core)
         {
-            Core = core;
-            if (core)
+            
+            Core = NetStashStandard.Log.NetStashLog.Core;
+            if (Core)
                 baseProxy.BaseProxyCore();
             else
                 baseProxy.BaseProxyNet();
